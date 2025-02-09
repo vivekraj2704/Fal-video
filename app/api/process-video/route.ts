@@ -73,7 +73,7 @@ export async function POST(req: Request) {
     await db.collection("videoProcessing").insertOne({
       sourceVideoUrl: cloudinaryUrl,
       transformationType,
-      falRequestId: videoResult.data.video.url,
+      falRequestId: cloudinarylink,
       status: "completed",
       createdAt: new Date(),
     });

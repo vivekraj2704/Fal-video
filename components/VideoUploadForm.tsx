@@ -301,7 +301,9 @@ export default function VideoProcessingUI() {
               Your browser does not support the video tag.
             </video>
             <br></br>
-            <div className="border 1px">{processedVideoUrl}</div>
+            <a href={processedVideoUrl} target="_blank">
+            <div className="border 1px">
+            {processedVideoUrl}</div></a>
             </div>
           ) : (
             <p className="text-gray-400">Processed video will appear here</p>
