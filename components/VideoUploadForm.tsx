@@ -397,7 +397,7 @@ export default function VideoProcessingUI() {
               type="file"
               accept="video/*"
               onChange={(e) => setFile(e.target.files?.[0] || null)}
-              className="file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100 w-full"
+              className="file:mr-4 file:py-1 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100 w-full h-full"
             />
             <Input
               type="text"
