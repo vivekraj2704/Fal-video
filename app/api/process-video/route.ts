@@ -66,6 +66,7 @@ export async function POST(req: Request) {
     });
     console.log(videoResult.data);
     console.log(videoResult.requestId);
+    const cloudinarylink = await uploadToCloudinary(videoResult.data.video.url);
 
     // Store request info in MongoDB
     const { db } = await connectToDatabase();
@@ -77,7 +78,7 @@ export async function POST(req: Request) {
       createdAt: new Date(),
     });
 
-    return NextResponse.json({ message: "Video processing done", link: videoResult.data.video.url });
+    return NextResponse.json({ message: "Video processing done", link: cloudinarylink });
   } catch (error) {
     console.error("Error processing video:", error);
     return NextResponse.json({ error: "Failed to process video" }, { status: 500 });

@@ -119,7 +119,7 @@ export default function HistoryDialog() {
         <DialogHeader>
           <DialogTitle>Processing History</DialogTitle>
         </DialogHeader>
-        <div className="mt-4 space-y-4">
+        <div className="mt-4 space-y-4 w-full h-[600px] overflow-scroll">
           {loading ? (
             <p className="text-gray-500">Loading...</p>
           ) : error ? (
