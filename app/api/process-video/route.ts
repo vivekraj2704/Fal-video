@@ -51,6 +51,7 @@ export async function POST(req: Request) {
       input: {
         prompt: transformationType,
         video_url: cloudinaryUrl,
+        strength: 0.95
       },
       logs: true,
       onQueueUpdate: (update) => {
