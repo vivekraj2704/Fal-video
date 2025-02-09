@@ -29,15 +29,14 @@ This project is a web application built with Next.js that leverages FAL (Fast Ar
 3. Set up environment variables in a `.env.local` file:
    ```env
    MONGODB_URI=
-CLOUDINARY_CLOUD_NAME=
-CLOUDINARY_API_KEY=
-CLOUDINARY_API_SECRET=
-FAL_API_KEY=
-NEXT_PUBLIC_BASE_URL=
-UPLOADTHING_SECRET=
-UPLOADTHING_APP_ID=
-UPLOADTHING_TOKEN=
-
+    CLOUDINARY_CLOUD_NAME=
+    CLOUDINARY_API_KEY=
+    CLOUDINARY_API_SECRET=
+    FAL_API_KEY=
+    NEXT_PUBLIC_BASE_URL=
+    UPLOADTHING_SECRET=
+    UPLOADTHING_APP_ID=
+    UPLOADTHING_TOKEN=
    ```
 4. Run the development server:
    ```sh
