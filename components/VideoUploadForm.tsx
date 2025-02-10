@@ -322,7 +322,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useToast } from "@/components/ui/use-toast"
 import { Loader2 } from "lucide-react"
-import HistoryDialog from "@/components/HistoryDialog"
 import { useUploadThing } from "@/lib/uploadthing"
 
 export default function VideoProcessingUI() {
@@ -379,31 +378,23 @@ export default function VideoProcessingUI() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-900 text-white">
-      {/* Navigation Bar */}
-      <nav className="flex justify-between items-center p-4 bg-gray-800">
-        <h1 className="text-lg font-semibold">Video Transformer</h1>
-        <div>
-          <HistoryDialog />
-        </div>
-      </nav>
-
+    <div className="flex flex-col min-h-10 bg-gray-900 text-white">
       {/* Main Content */}
-      <div className="flex flex-col md:flex-row flex-1 p-4 md:p-6 gap-4 md:gap-6">
+      <div className="flex flex-col md:flex-row flex-1 p-4 md:p-6 gap-5 md:gap-6">
         {/* Left Panel */}
-        <div className="w-full md:w-1/2 bg-gray-800 p-4 md:p-6 rounded-lg">
-          <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="w-full md:min-h-[60vh] md:w-1/2 bg-gray-800 p-4 md:p-6 rounded-lg">
+          <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
             <Input
               type="file"
               accept="video/*"
               onChange={(e) => setFile(e.target.files?.[0] || null)}
-              className="file:mr-4 file:py-1 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100 w-full h-full"
+              className="md:file:ml-[20%] file:py-2 file:px-6 file:rounded-md file:border-0 file:text-lg file:font-semibold file:bg-violet-50 file:text-violet-700 hover:bg-violet-100 text-black w-full mt-[30px] p-[30px] h-full"
             />
             <Input
               type="text"
               placeholder="Enter transformation type"
               value={transformationType}
-              className="text-black w-full"
+              className="text-black w-full mt-[40px]"
               onChange={(e) => setTransformationType(e.target.value)}
             />
             <Button type="submit" disabled={isUploading} className="w-full">
